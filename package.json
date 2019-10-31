@@ -4,8 +4,12 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
+<<<<<<< HEAD
     "jquery": "^1.9.1",
     "node-sass": "^4.13.0",
+=======
+    "jquery": "^3.4.0",
+>>>>>>> e4adc000d962769772bd1d707495962701e37e3e
     "react": "^16.10.2",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.10.2",
