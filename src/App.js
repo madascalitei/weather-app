@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import Titles from "./components/Titles";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const API_KEY = "f7c96b74b943d5ccca2fe52e309f4514";
 
@@ -63,14 +62,16 @@ export default class App extends Component {
             </div>
             <div className="row-right">
               <Form getWeather={this.getWeather} />
-              <Weather
-                city={this.state.city}
-                country={this.state.country}
-                temperature={this.state.temperature}
-                humidity={this.state.humidity}
-                description={this.state.description}
-                error={this.state.error}
-              />
+              {this.state.city && this.state.country ? (
+                <Weather
+                  city={this.state.city}
+                  country={this.state.country}
+                  temperature={this.state.temperature}
+                  humidity={this.state.humidity}
+                  description={this.state.description}
+                  error={this.state.error}
+                />
+              ) : null}
             </div>
           </div>
         </div>
