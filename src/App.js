@@ -55,12 +55,12 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <div className="wrapper">
-          <div className="container">
-            <div className="row-left">
+        <div className="box">
+          <div className="box__container">
+            <div className="box__container__row left-row">
               <Titles />
             </div>
-            <div className="row-right">
+            <div className="box__container__row right-row">
               <Form getWeather={this.getWeather} />
               {this.state.city && this.state.country ? (
                 <Weather
