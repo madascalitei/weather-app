@@ -25,150 +25,148 @@ body {
         width: 100%;
         flex-direction: column-reverse;
       }
+    }
 
-      &__row {
-        &.left-row {
-          background-color: red;
-          background-image: url("./img/left-section-bg.jpeg");
+    &__row {
+      &.left-row {
+        background-color: red;
+        background-image: url("./img/left-section-bg.jpeg");
+        background-position: bottom;
+        background-size: cover;
+        text-align: center;
+        color: #fff;
+        @media (min-width: 715px) {
+          padding: 70px 20px;
+          width: 40%;
+        }
+        @media (max-width: 714px) {
+          flex: 1;
           background-position: bottom;
-          background-size: cover;
+          padding: 40px 30px;
           text-align: center;
-          color: #fff;
-          @media (min-width: 715px) {
-            padding: 70px 20px;
-            width: 40%;
-          }
+        }
+
+        .left-row__title {
+          font-size: 32px;
           @media (max-width: 714px) {
-            flex: 1;
-            background-position: bottom;
-            padding: 40px 30px;
+            padding: 10px 20px 10px 20px;
+          }
+
+          @media (min-width: 715px) {
+          }
+        }
+
+        .left-row__subtitle {
+          @media (max-width: 714px) {
+            font-size: 18px;
+            padding: 0px 20px;
+          }
+
+          @media (min-width: 715px) {
+            font-size: 16px;
+            padding: 10px 20px;
+          }
+        }
+      }
+
+      &.right-row {
+        font-size: 16px;
+        background-color: #482b40;
+        @media (min-width: 715px) {
+          padding: 50px 20px;
+        }
+        @media (max-width: 714px) {
+          padding: 40px 0px;
+          min-height: 30%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+
+        form {
+          @media (min-width: 715px) {
+            padding-bottom: 20px;
+          }
+
+          @media (max-width: 714px) {
             text-align: center;
+            width: 100%;
           }
 
-          .left-row__title {
-            font-size: 32px;
-            @media (max-width: 714px) {
-              padding: 10px 20px 10px 20px;
+          input {
+            border: none;
+            background-color: initial;
+            color: #eae8e8;
+            border-bottom: 1px solid #bb9191;
+            width: 100px;
+            margin-right: 20px;
+            font-family: "Source Sans Pro", sans-serif;
+
+            &::placeholder {
+              color: #eae8e8;
             }
 
-            @media (min-width: 715px) {
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus,
+            &:-webkit-autofill:active {
+              -webkit-box-shadow: 0 0 0px 1000px #482b40 inset;
+              -webkit-text-fill-color: #eae8e8 !important;
             }
-          }
 
-          .left-row__subtitle {
-            @media (max-width: 714px) {
-              font-size: 18px;
-              padding: 0px 20px;
+            &[type="text"],
+            &:focus {
+              outline: none;
             }
 
             @media (min-width: 715px) {
               font-size: 16px;
-              padding: 10px 20px;
-            }
-          }
-        }
-        &.right-row {
-          font-size: 16px;
-          background-color: #482b40;
-          @media (min-width: 715px) {
-            padding: 50px 20px;
-          }
-          @media (max-width: 714px) {
-            padding: 20px 0px;
-            min-height: 30%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-          }
-
-          form {
-            @media (min-width: 715px) {
-              padding-bottom: 20px;
             }
 
             @media (max-width: 714px) {
-              text-align: center;
-              width: 100%;
-            }
+              font-size: 18px;
 
-            input {
-              border: none;
-              background-color: initial;
-              color: #eae8e8;
-              border-bottom: 1px solid #bb9191;
-              width: 100px;
-              margin-right: 20px;
-              font-family: "Source Sans Pro", sans-serif;
-
-              &::placeholder {
-                color: #eae8e8;
-              }
-
-              &:-webkit-autofill,
-              &:-webkit-autofill:hover,
-              &:-webkit-autofill:focus,
-              &:-webkit-autofill:active {
-                -webkit-box-shadow: 0 0 0px 1000px #482b40 inset;
-                -webkit-text-fill-color: #eae8e8 !important;
-              }
-
-              &[type="text"],
-              &:focus {
-                outline: none;
-              }
-
-              @media (min-width: 715px) {
-                font-size: 16px;
-              }
-
-              @media (max-width: 714px) {
-                font-size: 18px;
-
-                &:last-of-type {
-                  margin-right: 0px;
-                }
-              }
-            }
-
-            button {
-              background-color: #e67d76;
-              border: 2px solid #e67d77;
-              color: #fff;
-              border-radius: 3px;
-
-              @media (max-width: 714px) {
-                display: block;
-                margin: 0 auto;
-                margin-top: 25px;
-                padding: 15px 30px;
-                font-size: 18px;
-              }
-
-              @media (min-width: 715px) {
-                padding: 5px 10px;
+              &:last-of-type {
+                margin-right: 0px;
               }
             }
           }
 
-          .weather-info {
+          button {
+            background-color: #e67d76;
+            border: 2px solid #e67d77;
+            color: #fff;
+            border-radius: 3px;
+
             @media (max-width: 714px) {
-              width: fit-content;
-              margin: auto;
+              display: block;
+              margin: 0 auto;
+              margin-top: 25px;
+              padding: 15px 30px;
               font-size: 18px;
             }
 
-            p {
-              margin-top: 0px;
-              margin-bottom: 5px;
+            @media (min-width: 715px) {
+              padding: 5px 10px;
             }
+          }
+        }
 
-            p:first-child {
-              padding-top: 30px;
-            }
-            p:last-child {
-              padding-bottom: 30px;
-            }
+        .right-row__weather {
+          @media (max-width: 714px) {
+            width: fit-content;
+            margin: auto;
+            font-size: 18px;
+          }
+
+          p {
+            margin-top: 0px;
+            margin-bottom: 5px;
+          }
+
+          p:first-child {
+            padding-top: 30px;
           }
         }
       }

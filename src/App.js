@@ -57,10 +57,10 @@ export default class App extends Component {
       <div>
         <div className="box">
           <div className="box__container">
-            <div className="box__container__row left-row">
+            <div className="box__row left-row">
               <Titles />
             </div>
-            <div className="box__container__row right-row">
+            <div className="box__row right-row">
               <Form getWeather={this.getWeather} />
               {this.state.city && this.state.country ? (
                 <Weather
